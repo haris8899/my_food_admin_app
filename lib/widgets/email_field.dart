@@ -6,7 +6,7 @@ import '../utils/dimensions.dart';
 class EmailField extends StatelessWidget {
   final Controller;
   final String text;
-  const EmailField({super.key, required this.text, this.Controller});
+  const EmailField({super.key, required this.text, required this.Controller});
 
   @override
   Widget build(BuildContext context) {

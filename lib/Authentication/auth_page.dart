@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:my_food_admin_app/Home/main_home_page.dart';
+import 'package:my_food_admin_app/UserManagement/SignInorSignUp.dart';
 import 'package:my_food_admin_app/UserManagement/user-signin-page.dart';
 
 class AuthPage extends StatelessWidget {
@@ -16,7 +17,7 @@ class AuthPage extends StatelessWidget {
           if (snapshot.hasData) {
             return Hompage();
           } else {
-            return UserSignInWidget();
+            return SignInOrRegisterWidget();
           }
         },
       ),

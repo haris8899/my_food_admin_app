@@ -10,7 +10,8 @@ import 'package:my_food_admin_app/widgets/my_button.dart';
 import 'package:my_food_admin_app/widgets/password_field.dart';
 
 class UserSignInWidget extends StatefulWidget {
-  UserSignInWidget({super.key});
+  final Function()? onTapReg;
+  UserSignInWidget({super.key, required this.onTapReg});
 
   @override
   State<UserSignInWidget> createState() => _UserSignInWidgetState();
@@ -61,7 +62,7 @@ class _UserSignInWidgetState extends State<UserSignInWidget> {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.blue[900],
+          color: Colors.blueGrey[900],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,14 +189,7 @@ class _UserSignInWidgetState extends State<UserSignInWidget> {
                               "Register Now",
                               style: TextStyle(color: Colors.blue),
                             ),
-                            onTap: () => {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const UserSignUpWidget()),
-                              ),
-                            },
+                            onTap: widget.onTapReg
                           ),
                         ],
                       ),

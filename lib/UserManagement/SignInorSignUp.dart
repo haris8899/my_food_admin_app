@@ -1,15 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:my_food_admin_app/UserManagement/user-signin-page.dart';
+import 'package:my_food_admin_app/UserManagement/user-signup-page.dart';
 
 class SignInOrRegisterWidget extends StatefulWidget {
-  const SignInOrRegisterWidget({super.key});
+  SignInOrRegisterWidget({super.key});
 
   @override
   State<SignInOrRegisterWidget> createState() => _SignInOrRegisterWidgetState();
 }
 
 class _SignInOrRegisterWidgetState extends State<SignInOrRegisterWidget> {
+  bool TogglePage = true;
+  void toggle() {
+    setState(() {
+      TogglePage = !TogglePage;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return TogglePage
+        ? UserSignInWidget(
+            onTapReg: toggle,
+          )
+        : UserSignUpWidget(
+          onTapReg: toggle,
+        );
   }
 }

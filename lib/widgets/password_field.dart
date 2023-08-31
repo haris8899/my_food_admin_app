@@ -5,7 +5,7 @@ import 'package:my_food_admin_app/utils/dimensions.dart';
 class PasswordField extends StatefulWidget {
   final Controller;
   final String? text;
-  const PasswordField({super.key, required this.text, this.Controller});
+  const PasswordField({super.key, required this.text, required this.Controller});
 
   @override
   State<PasswordField> createState() => _PasswordFieldState();
