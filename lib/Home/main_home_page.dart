@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:my_food_admin_app/utils/dimensions.dart';
 import 'package:my_food_admin_app/widgets/action_icon_button.dart';
 import 'package:my_food_admin_app/widgets/large_text.dart';
+import 'package:my_food_admin_app/widgets/product_icon.dart';
 
 class Hompage extends StatefulWidget {
   Hompage({super.key});
@@ -17,7 +18,7 @@ class _HompageState extends State<Hompage> {
   List<String> Tabs = ["Dashboard", "Products", "Orders"];
   List<Widget> Pages = [
     Center(child: Text("Dashboard")),
-    Center(child: Text("Products")),
+    Center(child: ProductIcon()),
     Center(child: Text("Orders")),
   ];
   void SignUserOut() {
